@@ -1,0 +1,165 @@
+:root{
+    --main-clr: rgb(75, 75, 235);
+    --button-clr: rgb(240, 248, 255);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.container{
+    width: 27rem;
+    height: max-content;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0 0 0/0.3);
+    margin: auto;
+    margin-top: 5vh;
+    overflow: hidden;
+}
+
+.head{
+    text-align: center;
+    padding: 1rem;
+    background: rgb(224, 224, 255);
+    color: rgb(0, 0, 0);
+}
+
+.tag-line{
+    padding: 1rem;
+}
+
+.input-search{
+    padding: 0.3rem;
+    height: 1.8rem;
+    width: 18rem;
+    outline: none;
+}
+
+.search-btn{
+    padding: 0.43rem 1.5rem;
+    background: var(--main-clr);
+    color: var(--button-clr);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.list-container{
+    position: relative;
+    left: 3rem;
+}
+
+.text-container{
+    padding: 1.3rem 0rem;
+    list-style: none;
+}
+
+.text-container:hover .text::before{
+    background:var(--main-clr);
+}
+
+.text{
+    position: relative;
+    display: inline-block;
+    width: 16rem;
+}
+
+.text::before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -15px;
+    width: 0.3rem;
+    height: 2.5rem;
+    background: rgba(75, 75, 235, 0.3);
+}
+
+.btn{
+    padding: 0.5rem 1.5rem;
+    background: var(--main-clr);
+    border: none;
+    outline: none;
+    color: var(--button-clr);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale(1.02);
+}
+
+#hide-content{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    position: relative;
+}
+
+#box{
+    appearance: none;
+    border: 1px solid rgba(0 0 0/0.3);
+    border-radius: 4px;
+    margin-right: 10px;
+    height: 1.2rem;
+    width: 1.2rem;
+    cursor: pointer;
+}
+
+.check-mark + label{
+    cursor: pointer;
+    line-height: 1.4;
+}
+.check-mark{
+    position: absolute;
+    left: 8.3rem;
+    background: var(--main-clr);
+    border: 1px solid var(--main-clr);
+    border-radius: 4px;
+    width: 1.2rem;
+    height: 1.2rem;
+    z-index: -2;
+    display: none;
+}
+
+#box:checked + .check-mark{
+    display: block;
+}
+
+.check-mark::after{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 2px;
+    height: 5px;
+    width: 10px;
+    border: solid #fff;
+    border-width: 0 0 2px 2px;
+    transform: rotate(-45deg);
+}
+
+.input-text{
+    margin: 1rem;
+    margin-right: -7px;
+    padding: 0.2rem;
+    height: 2rem;
+    width: clamp(16rem, 19.35rem, 21rem);
+    font-size: 1rem;
+    outline: none;
+}
+
+.add-btn{
+    background: var(--main-clr);
+    border-radius: 0 5px 5px 0;
+    padding: 0.56rem 1.8rem;
+    margin-right: 1rem;
+    color: var(--button-clr);
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
